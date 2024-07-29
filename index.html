@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bike Mafia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS */
+        .bike-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .bike-item {
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .dealer-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .dealer-list li {
+            margin-bottom: 20px;
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images (1).jpeg" alt="Bike Company Logo" style="width: 50px; height: 50px; border-radius: 50%;">
+            <span style="font-size: 1.8em; font-weight: bold; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Super Bike Mafia 💀</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a onclick="showPage('home')">Home</a></li>
+                <li><a onclick="showPage('models')">Models</a></li>
+                <li><a onclick="showPage('about')">About</a></li>
+                <li><a onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="page active">
+            <img src="2022-Harley-Davidson-Road-King-Special-1-1024x358.webp" alt="Hero Image" class="hero-image">
+            <div class="bike-grid">
+                <div class="bike-item">
+                    <img src="bike1.jpg" alt="Bike 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <p style="font-weight: bold; color: #0066cc;">Bike Model 1</p>
+                </div>
+                <div class="bike-item">
+                    <img src="bike2.jpg" alt="Bike 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <p style="font-weight: bold; color: #0066cc;">Bike Model 2</p>
+                </div>
+                <div class="bike-item">
+                    <img src="bike3.jpg" alt="Bike 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                    <p style="font-weight: bold; color: #0066cc;">Bike Model 3</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="models" class="page">
+            <h1>Our Bike Models</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Power</th>
+                        <th>Torque</th>
+                        <th>Wet Weight (No Fuel)</th>
+                        <th>Starting Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Model A</td>
+                        <td>100 HP</td>
+                        <td>80 Nm</td>
+                        <td>180 kg</td>
+                        <td>$10,000</td>
+                    </tr>
+                    <tr>
+                        <td>Model B</td>
+                        <td>125 HP</td>
+                        <td>90 Nm</td>
+                        <td>190 kg</td>
+                        <td>$12,000</td>
+                    </tr>
+                    <tr>
+                        <td>Model C</td>
+                        <td>150 HP</td>
+                        <td>100 Nm</td>
+                        <td>200 kg</td>
+                        <td>$15,000</td>
+                    </tr>
+                    <tr>
+                        <td>Model D</td>
+                        <td>175 HP</td>
+                        <td>110 Nm</td>
+                        <td>210 kg</td>
+                        <td>$18,000</td>
+                    </tr>
+                    <tr>
+                        <td>Model E</td>
+                        <td>200 HP</td>
+                        <td>120 Nm</td>
+                        <td>220 kg</td>
+                        <td>$20,000</td>
+                    </tr>
+                    <tr>
+                        <td>Model F</td>
+                        <td>225 HP</td>
+                        <td>130 Nm</td>
+                        <td>230 kg</td>
+                        <td>$25,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="about" class="page">
+            <h1>About Us</h1>
+            <p>Add your company's about information here.</p>
+        </div>
+
+        <div id="contact" class="page">
+            <h1>Contact Us</h1>
+            <h2>Our Dealers</h2>
+            <ul class="dealer-list">
+                <li>
+                    <h3 style="color: #0066cc;">Dealer 1</h3>
+                    <p>123 Bike Street, City, State, ZIP</p>
+                    <p>Phone: (123) 456-7890</p>
+                </li>
+                <li>
+                    <h3 style="color: #0066cc;">Dealer 2</h3>
+                    <p>456 Cycle Avenue, Town, State, ZIP</p>
+                    <p>Phone: (234) 567-8901</p>
+                </li>
+                <li>
+                    <h3 style="color: #0066cc;">Dealer 3</h3>
+                    <p>789 Motorcycle Road, Village, State, ZIP</p>
+                    <p>Phone: (345) 678-9012</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
