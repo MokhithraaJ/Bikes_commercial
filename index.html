@@ -3,157 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Bike Mafia</title>
+    <title>Your Company Name</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Internal CSS */
-        .bike-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .bike-item {
-            text-align: center;
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .dealer-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .dealer-list li {
-            margin-bottom: 20px;
-            background-color: #f0f8ff;
-            padding: 15px;
-            border-radius: 8px;
-        }
-    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images (1).jpeg" alt="Bike Company Logo" style="width: 50px; height: 50px; border-radius: 50%;">
-            <span style="font-size: 1.8em; font-weight: bold; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Super Bike Mafia 💀</span>
+            <img src="logo.png" alt="Company Logo">
+            <h1>Your Company Name</h1>
         </div>
         <nav>
             <ul>
-                <li><a onclick="showPage('home')">Home</a></li>
-                <li><a onclick="showPage('models')">Models</a></li>
-                <li><a onclick="showPage('about')">About</a></li>
-                <li><a onclick="showPage('contact')">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-target="home">Home</a></li>
+                <li><a href="#models" class="nav-link" data-target="models">Models</a></li>
+                <li><a href="#cart" class="nav-link" data-target="cart">Cart</a></li>
+                <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div id="home" class="page active">
-            <img src="2022-Harley-Davidson-Road-King-Special-1-1024x358.webp" alt="Hero Image" class="hero-image">
-            <div class="bike-grid">
-                <div class="bike-item">
-                    <img src="bike1.jpg" alt="Bike 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                    <p style="font-weight: bold; color: #0066cc;">Bike Model 1</p>
-                </div>
-                <div class="bike-item">
-                    <img src="bike2.jpg" alt="Bike 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                    <p style="font-weight: bold; color: #0066cc;">Bike Model 2</p>
-                </div>
-                <div class="bike-item">
-                    <img src="bike3.jpg" alt="Bike 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                    <p style="font-weight: bold; color: #0066cc;">Bike Model 3</p>
+        <section id="home" class="page active">
+            <div class="hero">
+                <video autoplay loop muted>
+                    <source src="background-video.mp4" type="video/mp4">
+                </video>
+                <div class="hero-content">
+                    <h2>Your Company Name</h2>
+                    <p>Award-winning products and services</p>
                 </div>
             </div>
-        </div>
 
-        <div id="models" class="page">
-            <h1>Our Bike Models</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Model</th>
-                        <th>Power</th>
-                        <th>Torque</th>
-                        <th>Wet Weight (No Fuel)</th>
-                        <th>Starting Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Model A</td>
-                        <td>100 HP</td>
-                        <td>80 Nm</td>
-                        <td>180 kg</td>
-                        <td>$10,000</td>
-                    </tr>
-                    <tr>
-                        <td>Model B</td>
-                        <td>125 HP</td>
-                        <td>90 Nm</td>
-                        <td>190 kg</td>
-                        <td>$12,000</td>
-                    </tr>
-                    <tr>
-                        <td>Model C</td>
-                        <td>150 HP</td>
-                        <td>100 Nm</td>
-                        <td>200 kg</td>
-                        <td>$15,000</td>
-                    </tr>
-                    <tr>
-                        <td>Model D</td>
-                        <td>175 HP</td>
-                        <td>110 Nm</td>
-                        <td>210 kg</td>
-                        <td>$18,000</td>
-                    </tr>
-                    <tr>
-                        <td>Model E</td>
-                        <td>200 HP</td>
-                        <td>120 Nm</td>
-                        <td>220 kg</td>
-                        <td>$20,000</td>
-                    </tr>
-                    <tr>
-                        <td>Model F</td>
-                        <td>225 HP</td>
-                        <td>130 Nm</td>
-                        <td>230 kg</td>
-                        <td>$25,000</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="deals">
+                <h2>Today's Deals</h2>
+                <div class="deal-images">
+                    <img src="deal1.jpg" alt="Deal 1">
+                    <img src="deal2.jpg" alt="Deal 2">
+                    <img src="deal3.jpg" alt="Deal 3">
+                </div>
+            </div>
 
-        <div id="about" class="page">
-            <h1>About Us</h1>
-            <p>Add your company's about information here.</p>
-        </div>
+            <div class="about-and-feedback">
+                <aside class="about">
+                    <h2>About Us:</h2>
+                    <p>Your company description goes here. Add a few sentences about your company's mission, values, and achievements.</p>
+                </aside>
+                <div class="customer-feedback">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="customer1.jpg" alt="Customer 1">
+                            </div>
+                            <div class="card-back">
+                                <p>"Great products and service!" - Customer 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="customer2.jpg" alt="Customer 2">
+                            </div>
+                            <div class="card-back">
+                                <p>"Excellent quality!" - Customer 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="customer3.jpg" alt="Customer 3">
+                            </div>
+                            <div class="card-back">
+                                <p>"Highly recommended!" - Customer 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div id="contact" class="page">
-            <h1>Contact Us</h1>
-            <h2>Our Dealers</h2>
-            <ul class="dealer-list">
-                <li>
-                    <h3 style="color: #0066cc;">Dealer 1</h3>
-                    <p>123 Bike Street, City, State, ZIP</p>
-                    <p>Phone: (123) 456-7890</p>
-                </li>
-                <li>
-                    <h3 style="color: #0066cc;">Dealer 2</h3>
-                    <p>456 Cycle Avenue, Town, State, ZIP</p>
-                    <p>Phone: (234) 567-8901</p>
-                </li>
-                <li>
-                    <h3 style="color: #0066cc;">Dealer 3</h3>
-                    <p>789 Motorcycle Road, Village, State, ZIP</p>
-                    <p>Phone: (345) 678-9012</p>
-                </li>
-            </ul>
-        </div>
+        <section id="models" class="page">
+            <h2>Our Models</h2>
+            <div class="model">
+                <img src="bike1.jpg" alt="Bike Model 1">
+                <h3>Bike Model 1</h3>
+                <p>Power: 150 HP</p>
+                <p>Torque: 130 Nm</p>
+                <p>Wet Weight (No Fuel): 180 kg</p>
+                <p>Starting Price: $10,000</p>
+                <button class="add-to-cart" data-model="Bike Model 1" data-price="10000">Add to Cart</button>
+            </div>
+            <div class="model">
+                <img src="bike2.jpg" alt="Bike Model 2">
+                <h3>Bike Model 2</h3>
+                <p>Power: 180 HP</p>
+                <p>Torque: 150 Nm</p>
+                <p>Wet Weight (No Fuel): 200 kg</p>
+                <p>Starting Price: $12,000</p>
+                <button class="add-to-cart" data-model="Bike Model 2" data-price="12000">Add to Cart</button>
+            </div>
+            <!-- Add more model divs as needed -->
+        </section>
+
+        <section id="cart" class="page">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+        </section>
+
+        <section id="contact" class="page">
+            <h2>Contact Us</h2>
+            <p>Email: info@yourcompany.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Main St, City, Country</p>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-123.4567890!3d12.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDIwJzQ0LjQiTiAxMjPCsDI3JzI0LjQiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </section>
     </main>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
